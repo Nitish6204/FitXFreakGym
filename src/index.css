@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-secondary-fixed: #3b0900;
+  --color-surface-container-high: #2a2a2a;
+  --color-tertiary: #c8c6c5;
+  --color-on-surface-variant: #e7bdb8;
+  --color-outline: #ae8883;
+  --color-outline-variant: #5d3f3c;
+  --color-on-tertiary-container: #2a2a29;
+  --color-secondary-fixed: #ffdbd1;
+  --color-tertiary-fixed-dim: #c8c6c5;
+  --color-surface: #131313;
+  --color-on-tertiary-fixed-variant: #474646;
+  --color-on-secondary-container: #fffbff;
+  --color-primary-container: #ff544c;
+  --color-inverse-surface: #e5e2e1;
+  --color-on-secondary-fixed-variant: #862200;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-on-secondary: #5f1500;
+  --color-on-background: #e5e2e1;
+  --color-inverse-primary: #c00015;
+  --color-surface-dim: #131313;
+  --color-primary: #ffb4ac;
+  --color-on-tertiary-fixed: #1c1b1b;
+  --color-on-primary-fixed: #410002;
+  --color-surface-tint: #ffb4ac;
+  --color-surface-container-highest: #353534;
+  --color-secondary-container: #d73b00;
+  --color-secondary: #ffb5a0;
+  --color-surface-container: #201f1f;
+  --color-error: #ffb4ab;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-on-primary-container: #5c0005;
+  --color-inverse-on-surface: #313030;
+  --color-error-container: #93000a;
+  --color-surface-variant: #353534;
+  --color-surface-bright: #3a3939;
+  --color-primary-fixed: #ffdad6;
+  --color-tertiary-container: #929090;
+  --color-on-error-container: #ffdad6;
+  --color-on-surface: #e5e2e1;
+  --color-surface-container-low: #1c1b1b;
+  --color-on-primary-fixed-variant: #93000d;
+  --color-on-tertiary: #313030;
+  --color-background: #131313;
+  --color-on-primary: #690006;
+  --color-primary-fixed-dim: #ffb4ac;
+  --color-on-error: #690005;
+  --color-secondary-fixed-dim: #ffb5a0;
+
+  --spacing-space-xl: 3rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-margin: 2rem;
+
+  --font-body-md: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-headline-lg: "Anton", Impact, "Arial Narrow", sans-serif;
+  --font-body-lg: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-headline-sm: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-headline-md: "Anton", Impact, "Arial Narrow", sans-serif;
+  --font-headline-hero: "Anton", Impact, "Arial Narrow", sans-serif;
+  --font-label-lg: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-label-sm: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    color: #e5e2e1;
+    font-family: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+.font-headline-hero {
+  font-family: "Anton", Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+.font-headline-lg {
+  font-family: "Anton", Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+.font-headline-md {
+  font-family: "Anton", Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.font-headline-sm {
+  font-family: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.font-body-lg,
+.text-body-lg {
+  font-family: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.font-body-md,
+.text-body-md {
+  font-family: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.font-label-lg,
+.text-label-lg {
+  font-family: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.font-label-sm,
+.text-label-sm {
+  font-family: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353534;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff544c;
+}
+
+/* ========================================================================== */
+/* ADVANCED TEXT ANIMATIONS & PERFORMANCE UTILITIES                           */
+/* ========================================================================== */
+
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ff544c 0%,
+    #ffb4ac 25%,
+    #d73b00 50%,
+    #ffb4ac 75%,
+    #ff544c 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 4s ease infinite;
+}
+
+/* Hardware accelerated layer promotion to prevent repaint / layout shifts */
+.will-animate {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Reduced Motion Support for Accessibility & Low-spec Devices */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ========================================================================== */
+/* ICONS & ANIMATION UTILITIES                                                */
+/* ========================================================================== */
+
+/* Lucide icons: size follows the font-size utility (text-[16px] etc.).
+   Kept in the components layer so Tailwind utilities can override it. */
+@layer components {
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: 24px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+}
+
+/* Used by the mobile menu and all modals (class existed but was never defined) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out both;
+}
